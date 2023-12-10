@@ -1,0 +1,19 @@
+{
+    module: {
+        name: 'defold'
+    },
+
+    haxelib: {
+        hxdefold: {
+            version: 'git'
+            repository: 'https://github.com/MilkTool/hxdefold.git'
+        }
+    },
+
+    haxe: {
+        defines: ['hxdefold-projectroot=../../']
+        lib: ['hxdefold']
+        target: 'lua'
+        output: 'main.lua'
+    }
+}        

@@ -1,0 +1,25 @@
+module('away3d', '5.0.4');
+haxelib('away3d', '5.0.4');
+haxe({
+	lib:['away3d']
+});
+
+// def('module', {
+// 	name: 'away3d'
+// })
+
+
+{
+	module: {
+		name: 'away3d',
+		version: '5.0.4'
+	},
+
+	haxelib: {
+		away3d: '5.0.4'
+	},
+
+	haxe: {
+		lib: ['away3d']
+	}
+}

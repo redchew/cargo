@@ -1,0 +1,21 @@
+{
+	module: {
+		name: 'kha',
+		version: '0.0.0',
+		require: ['haxe'],
+	},
+
+	milk: {
+        haxe: {
+            lib: ['arguable'],
+		}
+	},
+
+	kha: {
+		library: '../../lib',
+		assets: [],
+		sdk: {
+			path: '/Kha'
+		}
+	}
+}

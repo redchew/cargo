@@ -1,0 +1,53 @@
+{
+    project: {
+        name: 'flixel_sample',
+        //description: 'Endless Fantasy Enhanced',
+        version: '0.0.1',
+        module: ['haxe', 'flixel']
+    },
+
+    haxe: {
+        source: ['src'],
+        lib: ['openfl', 'flixel'],
+        // target: 'js',
+        // output: 'release'
+    },
+
+    lime: {
+        project: {
+            meta: {
+                title:'EndlessFantasy',
+                identifier: 'com.redchew.ef',
+                version: '0.0.1',
+                company: 'redchew',
+                author: 'redchew'
+            },
+            app: {
+                main: 'ef.Main',
+                path: 'build',
+                file: 'EndlessFantasy'
+            },
+            window: {
+                width: 640,
+                height: 480,
+                background: '#FFFFFF',
+                fps: 30,
+                hardware: true,
+                allow-shaders: true,
+                depth-buffer: false,
+                stencil-buffer: false,
+                fullscreen: false,
+                resizable: true,
+                borderless: false,
+                vsync: false,
+                oridentation: 'portrait'
+            },
+            assets: {
+                // default: {
+                //     path: 'Assets',
+                //     rename: 'assets'
+                // }
+            }
+        }
+    }
+}

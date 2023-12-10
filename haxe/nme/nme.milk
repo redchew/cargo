@@ -1,0 +1,23 @@
+{
+    module: {
+        name: 'nme',
+        version: '6.3.29'
+    },
+
+    help: {
+        link: 'https://github.com/haxenme/nme',
+        doc: 'doc/help.md'
+    },
+
+    haxe: {
+		lib: ['nme']
+    },
+
+    haxelib: {
+        nme: {
+            repository: 'https://github.com/haxenme/nme.git',
+            version: 'git',
+            revision: '345d0f4655865129634f94ca76bf81288bc380ee'
+        }
+    }
+}

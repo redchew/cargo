@@ -1,0 +1,58 @@
+{
+    project: {
+        name: 'openfl_sample',
+        version: [0,0,1],
+        module: ['haxe', 'lime', 'openfl']
+    },
+
+    workspace: {
+        module: {
+            cargo: ['G:\\project\\cargo\\haxe\\lime']
+        }
+    },
+
+    haxe: {
+        source: ['src'],
+    },
+
+    lime: {
+        project: {
+            meta: {
+                title: 'OpenFL Simple',
+                identifier: 'com.redchew.openfl.simple',
+                version: '0.0.1',
+                company: 'redchew',
+                author: 'redchew'
+            },
+
+            app: {
+                main: 'Main',
+                // path: 'build',
+                file: 'OpenFLSimple',
+
+                window: {
+                    width: 640,
+                    height: 480,
+                    background: '#FFFFFF',
+                    fps: 30,
+                    hardware: true,
+                    allow_shaders: true,
+                    depth_buffer: false,
+                    stencil_buffer: false,
+                    fullscreen: true,
+                    resizable: true,
+                    borderless: false,
+                    vsync: false,
+                    oridentation: 'portrait'
+                },
+
+                assets: {
+                    default: {
+                        path: 'Assets',
+                        rename: 'assets'
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+{
+	project: {
+		name: 'LimeSimple',
+		version: [0,0,1],
+		module: ['haxe', 'lime']
+	},
+
+	haxe: {
+		source: ['Source'],
+		lib: ['lime'],
+		// target: 'js'
+	},
+
+	// Lime
+	lime: {
+		project: {
+			meta: {
+				title: 'LimeSimple',
+				identifier: 'com.redchew.lime.Simple',
+				version: '0.0.1',
+				company: 'redchew',
+				author: 'redchew'
+			},
+
+			app: {
+				main: 'Main',
+				//path: 'build'
+				file: 'LimeSimple',
+
+				// [lime.project.window]
+				// width: 640
+				// height: 480
+				// background: '//FFFFFF'
+				// fps: 30
+				// hardware: true
+				// allow-shaders: true
+				// depth-buffer: false
+				// stencil-buffer: false
+				// fullscreen: false
+				// resizable: true
+				// borderless: false
+				// vsync: false
+				// oridentation: 'portrait'
+			},
+
+			assets: {
+				default: {
+					path: 'Assets'
+					rename: 'assets'
+				}
+			}
+		}
+	}
+}

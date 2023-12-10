@@ -1,0 +1,40 @@
+// https://www.openfl.org/
+// https://github.com/openfl/openfl
+
+{
+    module: {
+        name: 'openfl',
+        version: '9.1.0',
+        require: ['lime']
+    },
+
+    help: {
+        link: 'https://github.com/openfl/openfl',
+        doc: 'doc/help.md'
+    },
+
+    feature: {
+        default: {
+
+        }
+    },
+
+    haxelib: {
+        openfl: checkVar('lime.platform', 'neko') ? '9.1.0' : {
+            version: 'git',
+            repository: 'https://github.com/openfl/openfl.git',
+            branch: '9.1.0'
+        }
+    },
+
+    lime: {
+        project: {
+            app: {
+                path: 'build/openfl'
+            },
+            haxelib: {
+                openfl: '9.1.0'
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    project: {
+        name: 'KhaSample',
+        module: ['haxe', 'kha']
+    },
+
+    workspace: { cargo: ['../khatoolkit'] },
+
+    haxe: {
+        source: ['Sources'],
+        main: 'Main'
+    },
+
+    kha: {
+        graphicAPI: 'OpenGL',
+        platform: 'Windows',
+        sdk: '../kha'
+    },
+
+    krom: {
+        path: '../krom',
+        executable: 'krom.exe'
+    }
+}

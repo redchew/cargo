@@ -1,0 +1,25 @@
+{
+	module: {
+		name: 'heaps',
+		version: '1.9.1'
+	},
+
+    milk: {
+        haxe: {
+            lib: ['arguable']
+        }
+    },
+
+	haxelib: {
+		heaps: { version: '1.9.1' },
+		arguable: ''
+	},
+
+	haxe: {
+		lib: ['heaps:1.9.1']
+	},
+
+	html5: {
+		template: 'template/html5/index.html'
+	}
+}

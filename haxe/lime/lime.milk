@@ -1,0 +1,64 @@
+// https://lime.software/docs/project-files/xml-format/
+
+{
+	module: {
+		name: 'lime',
+		version: '7.9.0',
+		require: ['haxe', 'hxp']
+	},
+
+	help: {
+		link: 'https://github.com/openfl/lime',
+		doc: 'doc/help.md'
+	},
+
+	git: {
+		lime: {
+			repository: 'https://github.com/native-toolkit/lime.git',
+			submodule: true
+		}
+	},
+
+	feature: {
+		default: {
+			haxelib: {
+				lime: '7.9.0',
+				hxcpp: '4.2.1',
+				format: ''
+			}
+		}
+	},
+
+	haxelib: {
+		lime: checkVar('lime.platform', 'neko') ? '7.9.0' : {
+			version: 'dev',
+			repository: '${source}/lime'
+		},
+		hxcpp: '4.2.1',
+		format: ''
+	},
+
+	lime: {
+		project: {
+			app: {
+				path: 'build/lime'
+			},
+
+			window: {
+				width: 1280,
+				height: 720,
+				background: '#FFFFFF',
+				fps: 60,
+				hardware: true,
+				// allow-shaders: true,
+				// depth-buffer: false,
+				// stencil-buffer: false,
+				fullscreen: false,
+				resizable: false,
+				borderless: false,
+				vsync: true,
+				oridentation: 'landscape'
+			}
+		},
+	}
+}

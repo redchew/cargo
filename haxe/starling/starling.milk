@@ -1,0 +1,5 @@
+{
+    module: { name: 'starling', require: ['openfl'] },
+    haxelib: { starling: {} },
+    haxe: { lib: ['starling'] }
+}

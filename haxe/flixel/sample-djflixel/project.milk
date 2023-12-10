@@ -1,0 +1,12 @@
+{
+    project: {
+        name: 'djflixel'
+        module: ['djflixel']
+    },
+
+    workspace: {
+        module: {
+            cargo: ['../../']
+        }
+    }
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	<meta title="EndlessFantasy" package="com.redchew.ef" version="0.0.1" company="redchew" author="redchew" />
+	<app main="ef.Main" path="build" file="EndlessFantasy" />
+	<source path="src" />
+	<haxelib name="lime" />
+	<haxelib name="flixel" />
+	<!-- <haxelib name="luajit" /> -->
+    <!-- <define name="dimension_backend_flixel"/> -->
+	<!-- <assets path="Assets" rename="assets" /> -->
+</project>

@@ -1,0 +1,39 @@
+{
+    project: {
+        name: 'OpenGL',
+        module: ['nme'],
+        output: 'build'
+    },
+
+    haxe: {
+        source: ['src'],
+        target: 'js'
+    },
+
+    nme: {
+        project: {
+            meta: {
+                title: 'NME Application',
+                package: 'org.haxe.nme.ogl',
+                version: '1.0.0',
+                company: 'nme'
+            },
+            window: {
+                width: 640,
+                height: 480,
+                orientation: 'landscape',
+                fps: 60,
+                background: '0xffffff',
+                require_shaders: 'true',
+                resizable: true,
+                hardware: true
+            }
+        }
+    },
+
+    milk: {
+        pipeline: {
+            verbose: true;
+        }
+    }
+}

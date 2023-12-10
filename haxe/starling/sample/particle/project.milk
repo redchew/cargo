@@ -1,0 +1,55 @@
+{
+    project: {
+        name: 'ParticleDemo',
+        // description: 'Endless Fantasy Enhanced',
+        version: '0.0.1',
+        module: ['haxe', 'starling']
+    },
+
+    haxe: {
+        source: ['Source'],
+        lib: ['openfl', 'starling']
+    },
+
+    lime: {
+        project: {
+            meta: {
+                title: 'ParticleDemo',
+                identifier: 'com.redchew.starling.particle',
+                version: '0.0.1',
+                company: 'redchew',
+                author: 'redchew'
+            },
+
+            app: {
+                main: 'Startup',
+                path: 'build',
+                file: 'ParticleDemo'
+            },
+
+            window: {
+                width: 1024,
+                height: 768,
+                background: '#FFFFFF',
+                fps: 120,
+                hardware: true,
+                allowshaders: true,
+                depthbuffer: false,
+                stencilbuffer: false,
+                fullscreen: false,
+                resizable: true,
+                borderless: false,
+                vsync: false,
+                oridentation: 'portrait'
+            },
+
+            assets: {
+                default: {
+                    path: 'Assets',
+                    rename: 'assets'
+                }
+            }
+
+        }
+    }
+}

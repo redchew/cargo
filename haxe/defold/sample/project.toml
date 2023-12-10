@@ -1,0 +1,14 @@
+[project]
+name = 'sample'
+module = ['haxe', 'defold']
+
+[haxe]
+source = ['src']
+lib = []
+# defines = ['hxdefold-projectroot=C:\\project\\cosmos.haxe\\defold\\sample\\SampleGame']
+extras = ['--macro include("sample")']
+output = 'main.lua'
+target = 'lua'
+
+[defold]
+packages = ['sample']

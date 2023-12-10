@@ -1,0 +1,38 @@
+// https://haxeflixel.com/
+
+{
+    module: {
+        name: 'flixel',
+        version: '4.9.0',
+        require: ['openfl']
+    },
+
+    help: {
+        link: 'https://github.com/HaxeFlixel/flixel',
+        doc: 'doc/help.md'
+    },
+
+    haxelib: {
+        flixel: {
+            version: '4.9.0'
+        }
+    },
+
+    haxe: {
+        lib: ['flixel:4.9.0']
+    },
+
+    lime: {
+        project: {
+            app: {
+                path: 'build/flixel'
+            },
+
+            // haxelib: {
+            //     flixel: {
+            //         version: '4.5.1'
+            //     }
+            // }
+        }
+    }
+}

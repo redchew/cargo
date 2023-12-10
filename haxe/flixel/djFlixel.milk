@@ -1,0 +1,17 @@
+{
+    module: {
+        name: 'dj.flixel',
+        version: '4.5.1',
+        require: ['flixel']
+    },
+
+    git: {
+        djtui: {
+            repository: 'https://github.com/johndimi/djTui.git'
+        }
+    },
+
+    haxe: {
+        source: ['${source}/djTui/source']
+    }
+}
