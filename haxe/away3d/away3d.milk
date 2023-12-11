@@ -1,25 +1,18 @@
-module('away3d', '5.0.4');
-haxelib('away3d', '5.0.4');
-haxe({
-	lib:['away3d']
-});
-
-// def('module', {
-// 	name: 'away3d'
-// })
-
-
 {
 	module: {
 		name: 'away3d',
-		version: '5.0.4'
+		version: '5.1.0'
 	},
 
 	haxelib: {
-		away3d: '5.0.4'
+		away3d: {
+			version: '5.1.0',
+			repository: 'https://github.com/openfl/away3d.git',
+			revision: 'e8857608470063a9a1f7f8206da98c3bb10ef5ea'
+		}
 	},
 
 	haxe: {
-		lib: ['away3d']
+		lib: ['away3d:git']
 	}
 }
