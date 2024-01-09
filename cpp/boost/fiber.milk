@@ -1,0 +1,8 @@
+// boost.fiber
+// a framework for micro-/userland-threads (fibers) scheduled cooperatively
+
+{
+	module: {
+		name: 'boost.fiber'
+	}
+}

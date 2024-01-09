@@ -1,0 +1,9 @@
+# Hot Patch
+
+[module]
+name = 'ombre'
+version = '0.0.0'
+
+[git.ombre]
+repository = 'https://github.com/yisonPylkita/ombre.git'
+path = '${stage.source}'

@@ -1,0 +1,8 @@
+// boost.core
+// a collection of core utilities used by other Boost libraries
+
+{
+	module: {
+		name: 'boost.core'
+	}
+}

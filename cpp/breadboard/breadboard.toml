@@ -1,0 +1,39 @@
+# C++ graph based event system https://google.github.io/breadboard
+
+[module]
+name = 'breadboard'
+version = '1.0.2'
+require = ['git']
+
+[git.breadboard]
+repository = 'https://github.com/google/breadboard.git'
+# branch = ''
+revision = '875319ac9f3b06530e899fc307a452a5f102b238'
+path = '${stage.source}'
+
+
+[git.fplutil]
+repository = 'https://github.com/google/fplutil.git'
+# branch = ''
+revision = '85707ff7a9f25086872995aef025b666fea120de'
+path = '${stage.source}'
+
+
+[git.corgi]
+repository = 'https://github.com/google/corgi.git'
+# branch = ''
+revision = '85707ff7a9f25086872995aef025b666fea120de'
+path = '${stage.source}'
+
+[git.mathfu]
+repository = 'https://github.com/google/mathfu.git'
+# branch = ''
+revision = '85b4c9f5b67457492c47bdfc4e669e3d6cae2e81'
+path = '${stage.source}'
+
+
+[git.pindrop]
+repository = 'https://github.com/google/pindrop.git'
+# branch = ''
+revision = '26ea923b50a912143391b01ab35744ff933a90ca'
+path = '${stage.source}'

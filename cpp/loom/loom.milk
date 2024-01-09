@@ -1,0 +1,16 @@
+// Lightweight Task Scheduler
+
+{
+	module: {
+		name: 'loom'
+	},
+
+	cpp: {
+		unit: [
+			{
+				name: 'loom',
+				basedir: 'loom-git'
+			}
+		]
+	}
+}

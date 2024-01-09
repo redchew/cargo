@@ -1,0 +1,8 @@
+// boost.hana
+// Your standard library for metaprogramming
+
+{
+	module: {
+		name: 'boost.haha'
+	}
+}

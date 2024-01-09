@@ -1,0 +1,8 @@
+// boost.variant2
+// a never-valueless, strong guarantee, C++11/14/17 implementation of [std::variant](http://en.cppreference.com/w/cpp/utility/variant).
+
+{
+	module: {
+		name: 'boost.variant2'
+	}
+}

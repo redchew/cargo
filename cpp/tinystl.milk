@@ -1,0 +1,25 @@
+{
+    module: {
+        name: 'tinystl',
+        version: '0.0.0'
+    },
+
+    git: {
+        tinystl: {
+            repository: 'https://github.com/mendsley/tinystl.git'
+        }
+    },
+
+    cpp: {
+        unit: [
+            {
+                name: 'tinystl',
+                basedir: '${source}/tinystl',
+                
+                export: {
+                    include: ['include']
+                }
+            }
+        ]
+    }
+}

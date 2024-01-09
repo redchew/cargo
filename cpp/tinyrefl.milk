@@ -1,0 +1,17 @@
+{
+	module: {
+		name: 'tinyrefl',
+		version: '1.0.0'
+	},
+
+	git: {
+		// tinyrefl: {
+		// 	repository: 'https://github.com/daoluan/tinyrefl.git',
+		// 	path: '${stage.source}'
+		// },
+
+		tinyrefl: {
+			repository: 'https://github.com/Manu343726/tinyrefl.git'
+		}
+	}
+}

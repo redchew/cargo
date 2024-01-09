@@ -1,0 +1,13 @@
+# Read-Compile-Run-Loop: tiny and powerful interactive C++ compiler (REPL) 
+# http://onqtam.com/programming/2018-02
+
+{
+  module: { name: 'cling', version: '0.9.0' },
+  
+  git: {
+    cling: {
+      repository: 'https://github.com/root-project/cling.git',
+      revision: 'f3768a4c43b0f3b23eccc6075fa178861a002a10'
+    }
+  }
+}

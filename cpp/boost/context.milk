@@ -1,0 +1,8 @@
+// boost.context
+// a foundational library that provides a sort of cooperative multitasking on a single thread
+
+{
+	module: {
+		name: 'boost.context'
+	}
+}

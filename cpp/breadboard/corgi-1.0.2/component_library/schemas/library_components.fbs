@@ -1,0 +1,118 @@
+// Copyright 2015 Google Inc. All rights reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+include "bullet_def.fbs";
+include "common.fbs";
+
+namespace corgi;
+
+// Data definitions for the components in the standard component library.
+
+table CommonServicesDef {}
+
+table TransformDef {
+  position:fplbase.Vec3;
+  scale:fplbase.Vec3;
+  orientation:fplbase.Vec3;
+  child_ids:[string];
+}
+
+table MetaDef {
+  // Each entity has a unique entity ID. This includes entity prototypes.
+  // If you don't specify the entity ID for your entity, it will be automatically
+  // generated when needed.
+  entity_id:string;
+
+  // If this entity is based on a prototype, the prototype's entity ID goes here.
+  prototype:string;
+
+  // A human-readable comment to remember what this entity is for.
+  comment:string;
+}
+
+enum RenderPass:ubyte {
+  Opaque,
+  Alpha,
+  Count
+}
+
+enum CullingTest:ubyte {
+  Distance,
+  ViewAngle,
+  Count
+}
+
+table RenderMeshDef {
+  source_file:string;
+  shaders:[string];
+  culling:[CullingTest];
+  render_pass:[RenderPass];
+  visible:bool = true;
+  tint:fplbase.ColorRGBA;
+
+  // Ignore animations and pose the mesh as it was exported.
+  // Useful for debugging problems with the mesh_pipeline.
+  default_pose:bool = false;
+}
+
+table PhysicsDef {
+  shapes:[BulletShapeDef];
+  kinematic:bool = false;
+  gravity_multiplier:float = 1.0;
+}
+
+// Debug information to log each frame.
+enum AnimationDebugState:ubyte {
+  // No debug information should be output.
+  None,
+
+  // Logs a header containing column labels in CSV (comma separated value)
+  // format. Once the header is output, the state automatically changes
+  // to AllChannels, so that the header will only be output once.
+  AllChannelsWithHeader,
+
+  // Logs all channels of animation data in CSV format.
+  // This is a lot of data. You should pipe it to a file and then view it
+  // in a spreadsheet (all spreadsheets can import CSV).
+  AllChannels,
+
+  // Logs the local transforms of all bones from `debug_bone` to the root node.
+  // The final global transform of the `debug_bone` is the product of the
+  // logged local transforms.
+  OneBone,
+}
+
+table AnimationDef {
+  // Object in the AnimTable that holds the array of animations.
+  anim_table_object:int;
+
+  // Initial index into the array of animations specified by anim_table_object.
+  // To play additional animations after this one, call
+  // AnimationComponent::AnimateFromTable().
+  anim_table_start_idx:int;
+
+  // Replaced by `debug_output` below.
+  debug:bool = false (deprecated);
+
+  // Debug information that is logged every frame.
+  debug_state:AnimationDebugState = None;
+
+  // If `debug_state` is specific to a bone, the index of that bone.
+  // You can see the bone indices by running mesh_pipeline --info on the FBX.
+  debug_bone:ubyte;
+}
+
+table GraphDef {
+  filename_list:[string];
+}

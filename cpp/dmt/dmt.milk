@@ -1,0 +1,16 @@
+// Dynamic Memory Tracker
+
+{
+	module: {
+		name: 'dmt'
+	},
+
+	cpp: {
+		unit: [
+			{
+				name: 'dmt',
+				basedir: 'dmt-git'
+			}
+		]
+	}
+}

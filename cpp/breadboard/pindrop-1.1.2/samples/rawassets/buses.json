@@ -1,0 +1,8 @@
+{
+  "buses": [
+    {
+      "name": "master",
+      "gain": 1.0
+    }
+  ]
+}

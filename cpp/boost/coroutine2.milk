@@ -1,0 +1,30 @@
+// boost.coroutine2
+// templates for generalized subroutines which allow multiple entry points for suspending and resuming execution at certain locations
+
+{
+	module: {
+		name: 'boost.coroutine',
+		version: '1.73'
+	},
+
+	git: {
+		coroutine2: {
+			repository: 'https://github.com/boostorg/coroutine2.git',
+			revision: '18bcccf34dcd80f4be1cd1c897778a2c9536c11f',
+			path: '${stage.source}/boost'
+		}
+	},
+
+	cpp: {
+		unit: [
+			{
+				name: 'boost.coroutine2',
+				basedir: '${stage.source}/boost/coroutine2'
+				
+				export: {
+					include: ['include']
+				}
+			}
+		]
+	}
+}

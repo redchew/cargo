@@ -1,0 +1,76 @@
+{
+	module: {
+		name: 'boost',
+		version: '1.73',
+	},
+
+	git: {
+		boost: {
+			repository: 'https://github.com/boostorg/boost.git',
+			revision: '62a4b7f40efbfe7a9b539edc14c508eb45e56e2d',
+			submodule: true
+		}
+	},
+
+	cpp: {
+		unit: [
+			{
+				name: 'boost.config',
+				basedir: '${source}/boost/config',
+				export: {
+					include: ['include']
+				}
+			},
+
+			// boost.fiber
+			// a framework for micro-/userland-threads (fibers) scheduled cooperatively
+			{
+				name: 'boost.fiber',
+				basedir: '${source}/boost/fiber',
+				include: ['include'],
+				files: ['src/**/*.cpp'],
+				export: {
+					include: ['include'],
+				}
+			},
+			
+			// boost.context
+			// a foundational library that provides a sort of cooperative multitasking on a single thread
+			{
+				name: 'boost.context',
+			},
+
+			// boost.coroutine2
+			// templates for generalized subroutines which allow multiple entry points for suspending and resuming execution at certain locations
+			{
+				name: 'boost.coroutine2',
+				basedir: '${source}/boost/coroutine2',				
+				export: {
+					include: ['include']
+				}
+			},
+
+			// boost.variant2
+			// a never-valueless, strong guarantee, C++11/14/17 implementation of [std::variant](http://en.cppreference.com/w/cpp/utility/variant).
+			{
+				name: 'boost.variant2',
+			},
+
+			// boost.hana
+			// Your standard library for metaprogramming
+			{
+				name: 'boost.hana',
+			}
+		]
+	},
+
+	flow: {
+		node: [
+			{
+				name: 'flow.context',
+				cppunit: 'flow.context'
+			}
+		]
+	}
+
+}

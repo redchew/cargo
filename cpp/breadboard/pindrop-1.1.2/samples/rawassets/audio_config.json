@@ -1,0 +1,9 @@
+{
+  "output_frequency": 44100,
+  "output_channels": "Stereo",
+  "output_buffer_size": 2048,
+  "mixer_channels": 50,
+  "mixer_virtual_channels": 100,
+  "listeners": 20,
+  "bus_file": "assets/buses.pinbus"
+}

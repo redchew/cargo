@@ -1,0 +1,37 @@
+// boost.config
+// configuration support for the Boost C++ libraries
+
+{
+	module: {
+		name: 'boost.coroutine',
+		version: '1.73'
+	},
+
+	git: {
+		config: {
+			name: 'boost.config',
+			repository: 'https://github.com/boostorg/config.git',
+			revision: '0b32bb4f6b8b38c149f9b446b7949c1a8ea9027f',
+			path: '${stage.source}/boost'
+		},
+
+		coroutine2: {
+			repository: 'https://github.com/boostorg/coroutine2.git',
+			revision: '18bcccf34dcd80f4be1cd1c897778a2c9536c11f',
+			path: '${stage.source}/boost'
+		}
+	},
+
+	cpp: {
+		unit: [
+			{
+				name: 'boost.config',
+				basedir: '${stage.source}/boost/config',
+				
+				export: {
+					include: ['include']
+				}
+			}
+		]
+	}
+}
