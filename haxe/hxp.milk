@@ -1,0 +1,6 @@
+{
+    module: { name: 'hxp', require: ['haxe'] },
+    haxelib: {
+        hxp: { version: '1.2.2' }
+    }
+}

@@ -1,0 +1,18 @@
+{
+	module: {
+		name: 'cabasa',
+		version: '',
+		tag: ['wasm', 'haxe']
+	},
+
+	haxelib: {
+		cabasa: {
+			version: 'git',
+			repository: 'https://github.com/redchew-fork/cabasa.git'
+		}
+	},
+
+	haxe: {
+		lib: ['cabasa']
+	}
+}
