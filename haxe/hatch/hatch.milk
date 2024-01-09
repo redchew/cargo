@@ -1,0 +1,15 @@
+{
+    module: {
+        name: 'hatch',
+        version: '0.0.4'
+    },
+
+    haxe: {
+        source: ['src'],
+        lib: ['farcek']
+    },
+
+    haxelib: {
+        farcek: '1.5.0'
+    }
+}

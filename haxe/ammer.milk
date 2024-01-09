@@ -1,0 +1,7 @@
+{
+    module: { name: 'ammer', version: '0.0.0' },
+    haxelib: {
+        ammder: { version: 'git', repository: 'https://github.com/Aurel300/ammer.git' }
+    },
+    haxe: { lib: ['ammer'] }
+}
